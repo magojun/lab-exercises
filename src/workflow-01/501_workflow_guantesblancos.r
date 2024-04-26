@@ -14,10 +14,10 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1_01/exp/"
-envg$EXPENV$wf_dir <- "~/buckets/b1_01/flow/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/exp/"
+envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
-envg$EXPENV$repo_dir <- "~/lab/exercises/"
+envg$EXPENV$repo_dir <- "~/lab-exercises/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$arch_sem <- "mis_semillas.txt"
 
@@ -184,9 +184,12 @@ TS_strategy_guantesblancos_202109 <- function( pmyexp, pinputexps, pserver="loca
   param_local$final_train <- c(202107, 202106, 202105)
 
 
-  param_local$train$training <- c(202105, 202104, 202103)
-  param_local$train$validation <- c(202106)
-  param_local$train$testing <- c(202107, 202106)
+  param_local$train$training <- c(201903, 201904, 201905, 201906, 201907, 
+                                  201908, 201909, 201910, 201911, 201912,
+                                  202001, 202002, 202008, 202009, 202010,
+                                  202011, 202102, 202104)
+  param_local$train$validation <- c(202012)
+  param_local$train$testing <- c(202101, 202103, 202105)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
