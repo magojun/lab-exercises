@@ -14,7 +14,7 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1/exp2/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/exp1Max/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
 envg$EXPENV$repo_dir <- "~/lab-exercises/"
@@ -184,13 +184,13 @@ TS_strategy_guantesblancos_202109 <- function( pmyexp, pinputexps, pserver="loca
   param_local$final_train <- c(201907, 201908, 201909, 201910, 201911, 201912, 202001, 202002, 202008, 202009, 202010, 202011, 202012, 202101, 202102, 202103, 202104, 202105)
   
   
-  param_local$train$training <- c(201903, 201904, 201905, 201906, 201907, 201908, 201909, 201910, 201911, 201912,202001, 202002, 202010, 202012, 202102, 202104)
-  param_local$train$validation <- c(202008)
-  param_local$train$testing <- c(202009, 202011, 202101, 202103, 202105)
+  param_local$train$training <- c(201903, 201904, 201905, 201906, 201907, 201908, 201909, 201910, 201911, 201912,202001, 202002, 202008, 202009, 202010,202011, 202102, 202104)
+  param_local$train$validation <- c(202012)
+  param_local$train$testing <- c(202101, 202103, 202105)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
-  param_local$train$undersampling <- 0.1
+  param_local$train$undersampling <- 1.0
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -210,13 +210,13 @@ TS_strategy_guantesblancos_202107 <- function( pmyexp, pinputexps, pserver="loca
   param_local$final_train <- c(201907, 201908, 201909, 201910, 201911, 201912, 202001, 202002, 202008, 202009, 202010, 202011, 202012, 202101, 202102, 202103, 202104, 202105)
   
   
-  param_local$train$training <- c(201903, 201904, 201905, 201906, 201907, 201908, 201909, 201910, 201911, 201912,202001, 202002, 202010, 202012, 202102, 202104)
-  param_local$train$validation <- c(202008)
-  param_local$train$testing <- c(202009, 202011, 202101, 202103, 202105)
+  param_local$train$training <- c(201903, 201904, 201905, 201906, 201907, 201908, 201909, 201910, 201911, 201912,202001, 202002, 202008, 202009, 202010,202011, 202102, 202104)
+  param_local$train$validation <- c(202012)
+  param_local$train$testing <- c(202101, 202103, 202105)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
-  param_local$train$undersampling <- 0.1
+  param_local$train$undersampling <- 1.0
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
@@ -270,13 +270,13 @@ HT_tuning_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
     # White Gloves Bayesian Optimization, with a happy narrow exploration
     learning_rate = c( 0.02, 0.8 ),
     feature_fraction = c( 0.5, 0.9 ),
-    num_leaves = c( 300L, 1024L,  "integer" ),
-    min_data_in_leaf = c( 100L, 2000L, "integer" )
+    num_leaves = c( 8L, 2048L,  "integer" ),
+    min_data_in_leaf = c( 10L, 10000L, "integer" )
   )
 
 
   # una Beyesian de Guantes Blancos, solo hace 15 iteraciones
-  param_local$bo_iteraciones <- 15 # iteraciones de la Optimizacion Bayesiana
+  param_local$bo_iteraciones <- 50 # iteraciones de la Optimizacion Bayesiana
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
