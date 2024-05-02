@@ -14,7 +14,7 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1/exp1Max/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/exp1Max2/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
 envg$EXPENV$repo_dir <- "~/lab-exercises/"
@@ -132,7 +132,7 @@ FE_historia_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
   param_local$lag3 <- FALSE # no me engraso con los lags de orden 3
 
   # no me engraso las manos con las tendencias
-  param_local$Tendencias1$run <- FALSE  # FALSE, no corre nada de lo que sigue
+  param_local$Tendencias1$run <- TRUE  # FALSE, no corre nada de lo que sigue
   param_local$Tendencias1$ventana <- 6
   param_local$Tendencias1$tendencia <- TRUE
   param_local$Tendencias1$minimo <- FALSE
@@ -142,7 +142,7 @@ FE_historia_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
   param_local$Tendencias1$ratiomax <- FALSE
 
   # no me engraso las manos con las tendencias de segundo orden
-  param_local$Tendencias2$run <- FALSE
+  param_local$Tendencias2$run <- TRUE
   param_local$Tendencias2$ventana <- 6
   param_local$Tendencias2$tendencia <- TRUE
   param_local$Tendencias2$minimo <- FALSE
@@ -154,7 +154,7 @@ FE_historia_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
 
   # No me engraso las manos con las variables nuevas agregadas por un RF
   # esta parte demora mucho tiempo en correr, y estoy en modo manos_limpias
-  param_local$RandomForest$run <- FALSE
+  param_local$RandomForest$run <- TRUE
   param_local$RandomForest$num.trees <- 20
   param_local$RandomForest$max.depth <- 4
   param_local$RandomForest$min.node.size <- 1000
@@ -162,7 +162,7 @@ FE_historia_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
 
   # no me engraso las manos con los Canaritos Asesinos
   # varia de 0.0 a 2.0, si es 0.0 NO se activan
-  param_local$CanaritosAsesinos$ratio <- 0.0
+  param_local$CanaritosAsesinos$ratio <- 1.2
   # desvios estandar de la media, para el cutoff
   param_local$CanaritosAsesinos$desvios <- 4.0
 
@@ -276,7 +276,7 @@ HT_tuning_guantesblancos <- function( pmyexp, pinputexps, pserver="local")
 
 
   # una Beyesian de Guantes Blancos, solo hace 15 iteraciones
-  param_local$bo_iteraciones <- 50 # iteraciones de la Optimizacion Bayesiana
+  param_local$bo_iteraciones <- 80 # iteraciones de la Optimizacion Bayesiana
 
   return( exp_correr_script( param_local ) ) # linea fija
 }
