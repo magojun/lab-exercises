@@ -184,9 +184,9 @@ TS_strategy_guantesblancos_202109 <- function( pmyexp, pinputexps, pserver="loca
   param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011)
   
   
-  param_local$train$training <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009)
-  param_local$train$validation <- c(202106)
-  param_local$train$testing <- c(202107)
+  param_local$train$training <- c(202103, 202102, 202101, 202012, 202011, 202010, 202009)
+  param_local$train$validation <- c(202104)
+  param_local$train$testing <- c(202107, 202106, 202105)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
@@ -210,9 +210,9 @@ TS_strategy_guantesblancos_202107 <- function( pmyexp, pinputexps, pserver="loca
   param_local$final_train <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009)
   
   
-  param_local$train$training <- c(202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008, 202007)
-  param_local$train$validation <- c(202104)
-  param_local$train$testing <- c(202105)
+  param_local$train$training <- c(202101, 202012, 202011, 202010, 202009, 202008, 202007)
+  param_local$train$validation <- c(202102)
+  param_local$train$testing <- c(202105, 202104, 202103)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
