@@ -14,7 +14,7 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1/experimento1/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/experimento2/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
 envg$EXPENV$repo_dir <- "~/lab-exercises/"
@@ -22,8 +22,8 @@ envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$arch_sem <- "mis_semillas.txt"
 
 # default
-envg$EXPENV$gcloud$RAM <- 256
-envg$EXPENV$gcloud$cCPU <- 8
+envg$EXPENV$gcloud$RAM <- 512
+envg$EXPENV$gcloud$cCPU <- 12
 
 #------------------------------------------------------------------------------
 # Error catching
@@ -181,12 +181,12 @@ TS_strategy_guantesblancos_202109 <- function( pmyexp, pinputexps, pserver="loca
 
 
   param_local$future <- c(202109)
-  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011)
+  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010)
   
   
-  param_local$train$training <- c(202103, 202102, 202101, 202012, 202011, 202010, 202009)
-  param_local$train$validation <- c(202104)
-  param_local$train$testing <- c(202107, 202106, 202105)
+  param_local$train$training <- c(202101, 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004)
+  param_local$train$validation <- c(202102)
+  param_local$train$testing <- c(202107, 202106, 202105, 202104, 202103)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
@@ -207,12 +207,12 @@ TS_strategy_guantesblancos_202107 <- function( pmyexp, pinputexps, pserver="loca
 
 
   param_local$future <- c(202107)
-  param_local$final_train <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009)
+  param_local$final_train <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008)
   
   
-  param_local$train$training <- c(202101, 202012, 202011, 202010, 202009, 202008, 202007)
-  param_local$train$validation <- c(202102)
-  param_local$train$testing <- c(202105, 202104, 202103)
+  param_local$train$training <- c(202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002)
+  param_local$train$validation <- c(202012)
+  param_local$train$testing <- c(202105, 202104, 202103, 202102, 202101)
 
   # Atencion  0.1  de  undersampling de la clase mayoritaria,  los CONTINUA
   # 1.0 significa NO undersampling ,  0.1  es quedarse con el 10% de los CONTINUA
