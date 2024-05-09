@@ -14,7 +14,7 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1/experimento2/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/experimento3/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
 envg$EXPENV$repo_dir <- "~/lab-exercises/"
@@ -181,10 +181,10 @@ TS_strategy_guantesblancos_202109 <- function( pmyexp, pinputexps, pserver="loca
 
 
   param_local$future <- c(202109)
-  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010)
+  param_local$final_train <- c(202107, 202106, 202105, 202104, 202103, 202102, 202101)
   
   
-  param_local$train$training <- c(202101, 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004)
+  param_local$train$training <- c(202101, 202012, 202011, 202010, 202009, 202008, 202007)
   param_local$train$validation <- c(202102)
   param_local$train$testing <- c(202107, 202106, 202105, 202104, 202103)
 
@@ -207,10 +207,10 @@ TS_strategy_guantesblancos_202107 <- function( pmyexp, pinputexps, pserver="loca
 
 
   param_local$future <- c(202107)
-  param_local$final_train <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008)
+  param_local$final_train <- c(202105, 202104, 202103, 202102, 202101, 202012, 202011)
   
   
-  param_local$train$training <- c(202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002)
+  param_local$train$training <- c(202011, 202010, 202009, 202008, 202007, 202006, 202005)
   param_local$train$validation <- c(202012)
   param_local$train$testing <- c(202105, 202104, 202103, 202102, 202101)
 
