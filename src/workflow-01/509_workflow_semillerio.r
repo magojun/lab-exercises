@@ -16,7 +16,7 @@ envg$EXPENV <- list()
 envg$EXPENV$exp_dir <- "~/buckets/b1/personal2/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
-envg$EXPENV$repo_dir <- "~/labo2024v1/"
+envg$EXPENV$repo_dir <- "~/lab-exercises/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$arch_sem <- "mis_semillas.txt"
 
