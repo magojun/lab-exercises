@@ -13,7 +13,7 @@ require("ParamHelpers")
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$exp_dir <- "~/buckets/b1/entregaFinal/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/entregaFinal2/"
 envg$EXPENV$wf_dir <- "~/buckets/b1/flow/"
 envg$EXPENV$wf_dir_local <- "~/flow/"
 envg$EXPENV$repo_dir <- "~/lab-exercises/"
@@ -245,8 +245,7 @@ HT_tuning_baseline <- function( pmyexp, pinputexps, pserver="local")
     min_data_in_leaf = c( 100L, 2000L, "integer" ),
     use_quantized_grad = TRUE,
     num_grad_quant_bins = c(2L,4L,"integer"),
-    stochasti_rounding = TRUE,
-    scale_pos_weight = 1.0
+    stochastic_rounding = TRUE,
   )
 
 
