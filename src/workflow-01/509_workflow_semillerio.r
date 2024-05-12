@@ -245,7 +245,7 @@ HT_tuning_baseline <- function( pmyexp, pinputexps, pserver="local")
     min_data_in_leaf = c( 100L, 2000L, "integer" ),
     use_quantized_grad = TRUE,
     num_grad_quant_bins = c(2L,4L,"integer"),
-    stochastic_rounding = TRUE,
+    stochastic_rounding = TRUE
   )
 
 
